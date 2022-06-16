@@ -1,7 +1,7 @@
 # HTML - CSS - JS
 | TABLE OF CONTENTS   |
 | ------------------- |
-| [ HTML document structure ]()                       |
+| [ HTML document structure ](#)                       |
 
 A typical HTML document will have the following structure:
 
