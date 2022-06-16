@@ -1,7 +1,8 @@
 # HTML - CSS - JS
 | TABLE OF CONTENTS   |
 | ------------------- |
-| [ HTML document structure ](#)                       |
+| [ HTML document structure ](#)                        |
+| [ Adding _`CSS`_ on HTML document structure ](#)       |
 
 A typical HTML document will have the following structure:
 
@@ -127,3 +128,103 @@ Document body and its related tags
 | `<p>`     | _This tag represents a paragraph._                                                                  |
 
 *`Last modified: 2022-06-16, time: 16:05PM`*
+***
+
+#### ADDING CSS ON HTML DOCUMENT STRUCTURE
++ [ How to associate style sheet to an HTML document? ](#)
++ [ CSS overriding. ](#)
++ [ CSS Syntax is made of three parts. ](#)
++ [ How to applied style rule to an element? ](#)
+  + [ Type selector. ](#)
+  + [ Universal selector. ](#)
+  + [ Descendant selector. ](#)
+  + [ Id selector. ](#)
+  + [ Class selector. ](#)
+  + [ Child selector. ](#)
+  + [ Attribute selector. ](#)
+
+##### How to associate style sheet to an HTML document?
++ _`Inline css`_ - We apply css syntax using style attribute on an element.
++ _`Embedded css`_ - We apply css syntax using _&lt;style&gt;_ element. This tag is _&lt;Head&gt;_ related tag.
++ _`External css`_ - We apply css syntax on a separate text file with _.css `extension`_.
+  - We include on HTML document file using _&lt;link&gt;_ tag. or
+  - We include on HTML document file using _`@Import url("");`_
+
+##### CSS overriding
++ _`Inline style`_ sheet takes highest priority since it override _`Embedded`_ and _`External`_ style sheet.
++ _`Embedded style`_ sheet override _`External style`_ sheet.
++ _`External style`_ sheet takes low priority.
+
+##### CSS Syntax is made of three parts
++ `Selector` - An element at which css rule will be applied.
++ `Property` - An element attribute _(All HTML attribute are converted into CSS properties)_.
++ `Value`    - Value assigned to the property.
+
+##### How to applied style rule to an element?
+
+###### Type selector
+```` CSS
+	/* Select and applied style rule at all level 2 heading */
+	h2 { }
+
+	/* Grouping selector */
+	h1, h2, h3, h4, h5, h6 { }
+
+````
+
+###### Universal selector
+````CSS
+	/* Select and applied style rule at all element */
+	* { }
+
+````
+
+###### Descendant selector
+````CSS
+	/* Select and applied style rule to <a> element only when it lies within div ul li */
+	div ul li a { }
+
+````
+
+###### Id selector
+````CSS
+	/* Select and applied style rule to the element with id attribute set to tda-main-header */
+	#tda-main-header { }
+
+	/* Select and applied style rule to the <h2> element with id attribute set to tda-main-header */
+	h2#tda-main-header { }
+
+	/* Select and applied style rule to the <h2> element when <h2> lies within an element with id attribute set to tda-main-header  */
+	#tda-main-header h2 { }
+
+````
+
+###### Class selector
+````CSS
+	/* Select and applied style rule to the element with class attribute set to clear */
+	.clear { }
+
+	/* Select and applied style rule to the <h1> element with class attribute set to clear class */
+	h1.clear { }
+
+	/* Select and applied style rule to the <h2> element when <h2> element lies within an element with class attribute set to a clear class  */
+	.clear h2 { }
+
+````
+
+###### Child selector
+````CSS
+	/* Select and applied style rule to <div> element if <div> is direct child of <body> element. */
+	body > div { }
+
+````
+
+#### Attribute selector
+````CSS
+	/* Select and applied style rule to <input> element with attribute type set to text */
+	input[type="text"] { }
+
+````
+
+*`Last modified: 2022-06-16, time: 19:55PM`*
+***
