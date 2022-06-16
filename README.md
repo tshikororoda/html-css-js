@@ -232,3 +232,99 @@ input[type="text"] { }
 
 *`Last modified: 2022-06-16, time: 19:55PM`*
 ***
+
+##### ADDING JAVASCRIPT ON HTML DOCUMENT STRUCTURE
+
++ [ How to place JavaScript in an HTML document? ](#)
++ [ How to access element in the DOM? ](#)
+
+
+###### How to `place` JavaScript in an HTML document?
++ JavaScript placed in the <head> element section.
++ JavaScript placed in the <body> element section.
++ External JavaScript source file.
+
+
+
+```` html
+<!--
+
+  JavaScript placed in the <head> element section.
+
+-->
+<head>
+	<script>
+
+		alert("JavaScript placed in the <head> element");
+
+	</script>
+</head>
+
+<!--
+
+    JavaScript placed in the <body> element section.
+
+-->
+<body>
+	<script>
+
+		document.write("JavaScript placed in the <body> element");
+
+	</script>
+<body>
+
+<!--
+
+  External JavaScript source file
+
+-->
+<script src="./js/main.js"></script>
+
+````
+
+###### How to access element in the DOM?
+
+| Get by 	            | Selector syntax   | Method	                  |
+| ------------------- | ----------------- | ------------------------- |
+| **ID**			        | _#tda-copyright_	| _getElementById()_        |
+| **Class**			      | _.tda-copyright_	| _getElementByClassName()_ |
+| **Tag/element**	    |	_p(any element)_	| _getElementByTagName()_   |
+| **Single selector** | _id/class/tag_	  | _querySelector()_         |
+| **All selector**	  | _id/class/tag_	  | _querySelectorAll()_      |
+
+JavaScript code:
+```` js
+// assets/js/main.js
+
+const byId         = document.getElementById('tda-copyright');
+const byClass      = document.getElementByClassName('tda-copyright');
+const byTag        = document.getElementByClassName('p');
+const queryById    = document.querySelector('#tda-copyright');
+const queryByClass = document.querySelectorAll('.tda-copyright');
+
+// Adding CSS using JavaScript
+byId.style.backgroundColor  = 'yellow';
+byId.style.fontSize         = '26pt';
+byId.style.color            = 'blue';
+
+````
+
+HTML code:
+```` html
+<!--/@tshikororoda
+ Folder: hds/hds.index.html
+ Document head and it's related tags
+
+-->
+
+<div id    ="tda-copyright"> Access this by ID     </div>
+<div class ="tda-copyright"> Access this by class  </div>
+<div class ="tda-copyright"> Access this by class  </div>
+
+<!-- Accessing by Tag/element -->
+<p> By element </p>
+
+````
+
+*`Last modified: 2022-05-21, time: 16:20PM`*
+*****
