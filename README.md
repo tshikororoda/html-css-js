@@ -110,9 +110,10 @@ Document body and its related tags
 
   </head>
   <body>
-    <!--____________________________________________
-      [ Document body related tags here ]
-    -->
+
+<!--____________________________________________
+  [ Document body related tags here ]
+-->
 
     <h1> &#39;Document Appropriate Skelton&#39; </h1>
     <p> This is the document structure. </p>
@@ -164,65 +165,68 @@ Document body and its related tags
 
 ###### Type selector
 ```` CSS
-	/* Select and applied style rule at all level 2 heading */
-	h2 { }
+/* Select and applied style rule at all level 2 heading */
+h2 { }
 
-	/* Grouping selector */
-	h1, h2, h3, h4, h5, h6 { }
+/* Grouping selector */
+h1, h2, h3, h4, h5, h6 { }
 
 ````
 
 ###### Universal selector
 ````CSS
-	/* Select and applied style rule at all element */
-	* { }
+/* Select and applied style rule at all element */
+* { }
 
 ````
 
 ###### Descendant selector
 ````CSS
-	/* Select and applied style rule to <a> element only when it lies within div ul li */
-	div ul li a { }
+/* Select and applied style rule to <a> element only when it lies within div ul li */
+div ul li a { }
 
 ````
 
 ###### Id selector
 ````CSS
-	/* Select and applied style rule to the element with id attribute set to tda-main-header */
-	#tda-main-header { }
+/* Select and applied style rule to the element with id attribute set to tda-main-header */
+#tda-main-header { }
 
-	/* Select and applied style rule to the <h2> element with id attribute set to tda-main-header */
-	h2#tda-main-header { }
+/* Select and applied style rule to the <h2> element with id attribute set to tda-main-header */
+h2#tda-main-header { }
 
-	/* Select and applied style rule to the <h2> element when <h2> lies within an element with id attribute set to tda-main-header  */
-	#tda-main-header h2 { }
+/*
+  Select and applied style rule to the <h2> element when <h2>lies within an element
+  with id attribute set to tda-main-header  */
+#tda-main-header h2 { }
 
 ````
 
 ###### Class selector
 ````CSS
-	/* Select and applied style rule to the element with class attribute set to clear */
-	.clear { }
+/* Select and applied style rule to the element with class attribute set to clear */
+.clear { }
 
-	/* Select and applied style rule to the <h1> element with class attribute set to clear class */
-	h1.clear { }
+/* Select and applied style rule to the <h1> element with class attribute set to clear class */
+h1.clear { }
 
-	/* Select and applied style rule to the <h2> element when <h2> element lies within an element with class attribute set to a clear class  */
-	.clear h2 { }
+/* Select and applied style rule to the <h2> element when <h2> element lies within an element
+with class attribute set to a clear class  */
+.clear h2 { }
 
 ````
 
 ###### Child selector
 ````CSS
-	/* Select and applied style rule to <div> element if <div> is direct child of <body> element. */
-	body > div { }
+/* Select and applied style rule to <div> element if <div> is direct child of <body> element. */
+body > div { }
 
 ````
 
 #### Attribute selector
 ````CSS
-	/* Select and applied style rule to <input> element with attribute type set to text */
-	input[type="text"] { }
+/* Select and applied style rule to <input> element with attribute type set to text */
+input[type="text"] { }
 
 ````
 
