@@ -240,8 +240,8 @@ input[type="text"] { }
 
 
 ###### How to `place` JavaScript in an HTML document?
-+ JavaScript placed in the <head> element section.
-+ JavaScript placed in the <body> element section.
++ JavaScript placed in the <head> element section: &lt;head&gt;.
++ JavaScript placed in the <body> element section: &lt;body&gt;.
 + External JavaScript source file.
 
 
@@ -319,12 +319,11 @@ HTML code:
 
 <div id    ="tda-copyright"> Access this by ID     </div>
 <div class ="tda-copyright"> Access this by class  </div>
-<div class ="tda-copyright"> Access this by class  </div>
 
 <!-- Accessing by Tag/element -->
 <p> By element </p>
 
 ````
 
-*`Last modified: 2022-05-21, time: 16:20PM`*
+*`Last modified: 2022-06-18, time: 15:47PM`*
 *****
