@@ -1,8 +1,15 @@
 # HTML - CSS - JS
-| TABLE OF CONTENTS   |
-| ------------------- |
-| [ HTML document structure ](#)                        |
-| [ Adding _`CSS`_ on HTML document structure ](#)       |
+
+|			 				|																																						|
+| ----------- | ------------------------------------------------------------------------- |
+| HTML 				| A markup language used to outline a webpage, and a procedure for making. 	|
+| CSS  			 	| A procedure for making our sites more visually appealing.                	|
+| JavaScript 	|	A programming language used to make websites faster and more interactive	|
+
+| TABLE OF CONTENTS   														 |
+| ------------------------------------------------ |
+| [ HTML document structure ](#)                   |
+| [ Adding _`CSS`_ on HTML document structure ](#) |
 
 A typical HTML document will have the following structure:
 
@@ -51,7 +58,7 @@ The `DOCTYPE` declaration tag is used by the web browser to understand the versi
 
 _`dir`_ and _`lang`_ are attributes of `HTML elements`. Attributes provide additional information about elements. Always specified attributes at the start tag: _&lt;element lang="language_code"&gt;_. The _`dir`_ attribute specifies the text direction of the element's content. The _`lang`_ attribute specifies the language of the element's content.
 
-Document head and its related tags
+Document _&lt;head&gt;_ element and its related tags
 
 ```` html
 <!--/@tshikororoda
@@ -72,7 +79,7 @@ Document head and its related tags
     <meta http-equiv  ="X-UA-Compatible"  content="IE=edge" />
     <meta name        ="viewport"         content="width=device-width; initial-scale=1.0" />
 
-    <title> Document Appropriate Skelton </title>
+    <title> Document Appropriate Skeleton&#33; </title>
 
   </head>
 
@@ -85,7 +92,7 @@ Document head and its related tags
 | `<head>`   | _This tag represents the document's header which can keep other HTML tags like `<title>, <meta>` etc._ |
 | `<title>`  | _The `<title>` tag is used inside the `<head>` tag to mention the document title._                     |
 
-Document body and its related tags
+Document _&lt;body&gt;_ element and its related tags
 
 ```` html
 <!--/@tshikororoda
@@ -106,7 +113,7 @@ Document body and its related tags
     <meta http-equiv  ="X-UA-Compatible"  content="IE=edge" />
     <meta name        ="viewport"         content="width=device-width; initial-scale=1.0" />
 
-    <title> Document Appropriate Skelton </title>
+    <title> Document Appropriate Skeleton&#33; </title>
 
   </head>
   <body>
@@ -115,10 +122,10 @@ Document body and its related tags
   [ Document body related tags here ]
 -->
 
-    <h1> &#39;Document Appropriate Skelton&#39; </h1>
-    <p> This is the document structure. </p>
+    <h1> &#39;Document Appropriate Skelton&#33;&#39; </h1>
+    <p> This is the document structure&#33;. </p>
 
-  <body>
+  </body>
 </html>
 
 ````
@@ -128,7 +135,14 @@ Document body and its related tags
 | `<h1>`    | _This tag represents the heading._                                                                  |
 | `<p>`     | _This tag represents a paragraph._                                                                  |
 
-*`Last modified: 2022-06-16, time: 16:05PM`*
+#### Summery
+In the first line, we are declaring _(to the web browser)_ that we are writing the document in the latest version of `HTML: HTML5`.
+After that, the page consists of `nested HTML elements` _(such as html, head and body)_, each with an opening and closing tag. _Notice how each of the inner elements is indented just a bit further than the last. While this is not necessarily required by the browser, it will be very helpful to keep this up in your own source code_. HTML elements can include _`attributes`_, which give the browser `extra information about the element`. For instance: when we include `lang="en"` in our root tag, we are informing the web browser that we are using English as our primary language. when we include `dir="ltr"` we are informing the web browser to `display text from left to right direction`.
+Inside the HTML element, we include both a head and a body tag. The head element will include information about your page that is not necessarily displayed, and the body element will contain what is actually visible to users who visit the site.
+Within the head, we have included a title for our webpage, which you’ll notice is displayed in the tab at the top of our web browser.
+_Finally_, we’ve included the text ``“&#39;Document Appropriate Skelton!&#39;” and “This is the document structure!”`` in the body, which is the visible part of our page.
+
+:clock1: *`Last modified: 2022-06-16, time: 16:05PM`*
 ***
 
 #### ADDING CSS ON HTML DOCUMENT STRUCTURE
@@ -143,6 +157,8 @@ Document body and its related tags
   + [ Class selector. ](#)
   + [ Child selector. ](#)
   + [ Attribute selector. ](#)
++ [ Responsive design ](#)
++ [ Sass ](#)
 
 ##### How to associate style sheet to an HTML document?
 + _`Inline css`_ - We apply css syntax using style attribute on an element.
@@ -230,23 +246,22 @@ input[type="text"] { }
 
 ````
 
-*`Last modified: 2022-06-16, time: 19:55PM`*
+:clock1: *`Last modified: 2022-06-16, time: 19:55PM`*
 ***
 
 ##### ADDING JAVASCRIPT ON HTML DOCUMENT STRUCTURE
 
 + [ How to place JavaScript in an HTML document? ](#)
 + [ How to access element in the DOM? ](#)
++ [ How to *run* JavaScript _`functions`_ when the HTML document is loaded? ](#)
 
 
 ###### How to `place` JavaScript in an HTML document?
-+ JavaScript placed in the <head> element section: &lt;head&gt;.
-+ JavaScript placed in the <body> element section: &lt;body&gt;.
-+ External JavaScript source file.
++ [ JavaScript placed in the <head> element section: _&lt;head&gt;_ ](#)
++ [ JavaScript placed in the <body> element section: _&lt;body&gt;_ ](#)
++ [ External JavaScript source file ](#)
 
-
-
-```` html
+``` html
 <!--
 
   JavaScript placed in the <head> element section.
@@ -260,6 +275,9 @@ input[type="text"] { }
 	</script>
 </head>
 
+```
+
+``` html
 <!--
 
     JavaScript placed in the <body> element section.
@@ -273,6 +291,9 @@ input[type="text"] { }
 	</script>
 <body>
 
+```
+
+```html
 <!--
 
   External JavaScript source file
@@ -280,9 +301,12 @@ input[type="text"] { }
 -->
 <script src="./js/main.js"></script>
 
-````
+```
 
 ###### How to access element in the DOM?
+`DOM - Document Object Model` The DOM is a convenient way of visualizing the way HTML elements relate to each other using a tree-like structure. Below is an example of the DOM layout from our HTML document structure:
+
+![DOM](./resources/dom-structure.png)
 
 | Get by 	            | Selector syntax   | Method	                  |
 | ------------------- | ----------------- | ------------------------- |
@@ -298,9 +322,9 @@ JavaScript code:
 
 const byId         = document.getElementById('tda-copyright');
 const byClass      = document.getElementByClassName('tda-copyright');
-const byTag        = document.getElementByClassName('p');
 const queryById    = document.querySelector('#tda-copyright');
 const queryByClass = document.querySelectorAll('.tda-copyright');
+const byTag        = document.getElementByClassName('p');
 
 // Adding CSS using JavaScript
 byId.style.backgroundColor  = 'yellow';
@@ -325,5 +349,88 @@ HTML code:
 
 ````
 
-*`Last modified: 2022-06-18, time: 15:47PM`*
+###### How to *run* JavaScript _`functions`_ when the HTML document is loaded?
+
+`Program:` `Program:` Our task is to write a program which get the current year and display the obtained results to _copyright_ statement of our website.
+
+###### Pseudo code:
+Create function called `thisYear()`. <br />
+Declare local variable: `currentDate, year, thisYear and tdaCopyright`. <br />
+Implimate the `object Date()` using keyword `new`. <br />
+Get the current year. <br />
+Create a text node. <br />
+Get/select an element where output message shoud be append to. <br />
+Append/insert the output results to the selected element. <br />
+Print the text string appended only with slateblue color.
+
+JavaScript code
+``` js
+"use strict";
+
+// create a function
+function thisYear(){
+
+	// Declaring local variables
+	let currentDate;
+	let year;
+	let tdaCopyright;
+	let thisYear;
+
+	// Create an object for Date()
+	currentDate = new Date();
+
+	// Get the current year
+	year        = currentDate.getFullYear();
+
+	// Create text node
+	thisYear    = document.createTextNode(year);
+
+	// Get/select the element to insert content into container
+	tdaCopyright = document.querySelector('#tda-copyright');
+
+	//  Insert current year into an element selected
+	tdaCopyright.parentNode.insertBefore(thisYear, tdaCopyright);
+
+	/* CSS
+
+		print text in slateblue color only.
+
+	*/
+	tdaCopyright.parentNode.style.color = 'slateblue';
+
+}
+
+// Run this functions when the document is loaded
+window.onload = function()	{
+
+// #01
+
+	thisYear();
+
+}
+
+/*
+The code below does the same thing #01 does.
+
+// Run this functions when the document is loaded
+window.onload(
+
+	thisYear()
+);
+
+or
+
+window.onLoad = thisYear;
+
+*/
+
+```
+
+HTML code
+``` html
+<span id="tda-copyright">&#169;</span>
+
+```
+
+:clock1: *`Last modified: 2022-06-23, time: 14:01PM`*
 *****
