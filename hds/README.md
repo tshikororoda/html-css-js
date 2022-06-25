@@ -1,6 +1,6 @@
-### &#47;&#47;&gt; _&#64;tshikororoda_
+### &#47;&#47;&gt;
 
-This is a document appropriate skeleton for HTML document.
+This is HTML document appropriate skeleton.
 
 ###### Nu Html Checker
 **`Document checking completed. No errors or warnings to show.`**
