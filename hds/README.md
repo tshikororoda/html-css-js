@@ -2,6 +2,5 @@
 
 This is HTML document appropriate skeleton.
 
-
 >> ###### Nu Html Checker
 >**`Document checking completed. No errors or warnings to show.`**

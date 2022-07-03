@@ -97,7 +97,7 @@ Document _&lt;body&gt;_ element and its related tags
 ```` html
 <!--/@tshikororoda
  Folder: hds/hds.index.html
- Document head and its related tags
+ Document head and body with their related tags
 
 -->
 
